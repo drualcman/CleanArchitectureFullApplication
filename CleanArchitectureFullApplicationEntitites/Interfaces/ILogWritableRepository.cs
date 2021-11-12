@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CleanArchitectureFullApplication.Entitites.Interfaces
+namespace CleanArchitectureFullApplication.Main.Interfaces
 {
     public interface ILogWritableRepository
     {

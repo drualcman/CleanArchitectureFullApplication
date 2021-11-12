@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CleanArchitectureFullApplication.Entitites
+namespace CleanArchitectureFullApplication.Main.Entities
 {
     public class Log
     {

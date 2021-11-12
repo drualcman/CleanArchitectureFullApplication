@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CleanArchitectureFullApplication.Entitites.Exceptions
+namespace CleanArchitectureFullApplication.Main.Exceptions
 {
     public class GeneralException : Exception
     {
