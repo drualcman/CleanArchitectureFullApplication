@@ -13,6 +13,7 @@ namespace CleanArchitectureFullApplication.Sales.Entities.Aggregates
     /// </summary>
     public class OrderAggregate : Order
     {
+        
         //almacenar los detalles de la orden de forma privada
         readonly List<OrderDetail> OrderDetailsField = new List<OrderDetail>();
 
