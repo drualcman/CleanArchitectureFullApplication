@@ -1,4 +1,5 @@
-﻿using CleanArchitectureFullApplication.Sales.UseCases.Ports.Common;
+﻿using CleanArchitectureFullApplication.Dto.CreateOrder;
+using CleanArchitectureFullApplication.Sales.UseCases.Ports.Common;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace CleanArchitectureFullApplication.Sales.UseCases.Ports.CreateOrder
 {
-    public interface ICreateOrderInputPort : IPort<string>
+    public interface ICreateOrderInputPort : IPort<CreateOrderDto>
     {
     }
 }
