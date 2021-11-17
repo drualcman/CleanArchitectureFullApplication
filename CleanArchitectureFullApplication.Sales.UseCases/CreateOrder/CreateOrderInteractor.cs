@@ -1,5 +1,6 @@
 ﻿using CleanArchitectureFullApplication.Dto.CreateOrder;
 using CleanArchitectureFullApplication.Main.Events;
+using CleanArchitectureFullApplication.Main.Interfaces;
 using CleanArchitectureFullApplication.Main.Validators;
 using CleanArchitectureFullApplication.Sales.Entities.Aggregates;
 using CleanArchitectureFullApplication.Sales.Events;
@@ -15,50 +16,64 @@ namespace CleanArchitectureFullApplication.Sales.UseCases.CreateOrder
 {
     public class CreateOrderInteractor : ICreateOrderInputPort
     {
-        readonly IOrderWritableRepository Repository;
+        readonly IOrderWritableRepository OrderRepository;
+        readonly ILogWritableRepository LogRepository;
+        readonly IUnitOfWork UnitOfwork;
         readonly ICreateOrderOutputPort Output;
         readonly IEventHub<SpecialOrderCreatedEvent> Events;
-        readonly IValidator<CreateOrderDto> Validator;
+        readonly IEnumerable<IValidator<CreateOrderDto>> Validators;
+        readonly IValidatorService<CreateOrderDto> Validator;
+        readonly IApplicationStatusLogger ApplicationStatusLogger;
         public CreateOrderInteractor(
-            IOrderWritableRepository repository,
+            IOrderWritableRepository oderRepository,
+            ILogWritableRepository logRepository,
+            IUnitOfWork unitOfwork,
             ICreateOrderOutputPort output,
             IEventHub<SpecialOrderCreatedEvent> events,
-            IValidator<CreateOrderDto> validator)
+            IEnumerable<IValidator<CreateOrderDto>> validators,
+            IValidatorService<CreateOrderDto> validator,
+            IApplicationStatusLogger applicationStatusLogger)
         {
-            Repository = repository;
+            OrderRepository = oderRepository;
+            LogRepository = logRepository;
+            UnitOfwork = unitOfwork;
             Output = output;
             Events = events;
+            Validators = validators;
             Validator = validator;
-        }            
+            ApplicationStatusLogger = applicationStatusLogger;
+        }
 
-        public ValueTask Handle(CreateOrderDto order)
+        public async ValueTask Handle(CreateOrderDto order)
         {
-            ValidationResult validation = Validator.Validate(order);
-            if (validation.IsValid)
+            //clausula guard: solo continue el codigo si cumple la validacion
+            //por eso no necesita una propiedad IsValid
+            Validator.Validate(order, Validators, ApplicationStatusLogger);
+
+            OrderAggregate aggregate = new OrderAggregate();
+            aggregate.OrderDate = DateTime.Now;
+            aggregate.ShipAddress = order.ShipAddress;
+            aggregate.ShipCity = order.ShipCity;
+            aggregate.ShipCountry = order.ShipCountry;
+            aggregate.ShipPostalCode = order.ShipPostalCode;
+            aggregate.CustomerId = order.CustomerId;
+            foreach (CreateOrderDetailDto item in order.OrderDetails)
             {
+                aggregate.AddDetail(item.ProdcutId, item.UnitPrice, item.Quantity);
+            }
+            //registrar en la base de datos
+            OrderRepository.CreateOrder(aggregate);
+            LogRepository.Add(new Main.Entities.Log($"Crear orden de compra"));
+            await UnitOfwork.SaveChanges();         //guarda los dos registros
 
-                OrderAggregate aggregate = new OrderAggregate();
-
-                aggregate.OrderDate = DateTime.Now;
-                aggregate.ShipAddress = order.ShipAddress;
-                aggregate.ShipCity = order.ShipCity;
-                aggregate.ShipCountry = order.ShipCountry;
-                aggregate.ShipPostalCode = order.ShipPostalCode;
-                aggregate.CustomerId = order.CustomerId;
-
-                Repository.CreateOrder(aggregate);
-
+            if (aggregate.OrderDetails.Count > 3)
+            {
                 SpecialOrderCreatedEvent specialOrder =
                     new SpecialOrderCreatedEvent(aggregate.Id, aggregate.OrderDetails.Count);
-                Events.Raise(specialOrder);
+                await Events.Raise(specialOrder);
+            }
 
-                Output.Handle(aggregate.Id);
-            }
-            else
-            {
-                
-            }
-            return ValueTask.CompletedTask;
+            await Output.Handle(aggregate.Id);
         }
     }
 }
