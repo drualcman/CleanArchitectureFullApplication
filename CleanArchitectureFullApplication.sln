@@ -32,6 +32,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanArchitectureFullApplic
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArchitectureFullApplication.EfCore.Repositories", "CleanArchitectureFullApplication.EfCore.Repositories\CleanArchitectureFullApplication.EfCore.Repositories.csproj", "{11C65AE5-93DF-41BB-8CD6-6514C728861E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArchitectureFullApplication.Repositories.IoC", "CleanArchitectureFullApplication.Repositories.IoC\CleanArchitectureFullApplication.Repositories.IoC.csproj", "{530F8309-67B2-4AA5-80C1-13A8BEA6B7C0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -70,6 +72,10 @@ Global
 		{11C65AE5-93DF-41BB-8CD6-6514C728861E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{11C65AE5-93DF-41BB-8CD6-6514C728861E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{11C65AE5-93DF-41BB-8CD6-6514C728861E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{530F8309-67B2-4AA5-80C1-13A8BEA6B7C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{530F8309-67B2-4AA5-80C1-13A8BEA6B7C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{530F8309-67B2-4AA5-80C1-13A8BEA6B7C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{530F8309-67B2-4AA5-80C1-13A8BEA6B7C0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -85,6 +91,7 @@ Global
 		{F8C972D0-918F-46F4-9666-C56E6E4AE1FB} = {D7530BF1-1958-4F35-9825-9DE6DE78E2D9}
 		{9AA47266-2738-4B06-8932-D2CEBA347F0B} = {F8C972D0-918F-46F4-9666-C56E6E4AE1FB}
 		{11C65AE5-93DF-41BB-8CD6-6514C728861E} = {F8C972D0-918F-46F4-9666-C56E6E4AE1FB}
+		{530F8309-67B2-4AA5-80C1-13A8BEA6B7C0} = {F8C972D0-918F-46F4-9666-C56E6E4AE1FB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {596DDBE1-F3EA-472D-8F0E-15C42A2422AF}
