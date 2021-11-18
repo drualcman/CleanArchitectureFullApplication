@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace CleanArchitectureFullApplication.Main.Exceptions
 {
-    public class UpdateExceptions : Exception
+    public class UpdateException : Exception
     {
         public IReadOnlyList<string> Entries { get; set; }
 
-        public UpdateExceptions() { }
-        public UpdateExceptions(string message) : base(message) { }
-        public UpdateExceptions(string message, Exception innerException) :
+        public UpdateException() { }
+        public UpdateException(string message) : base(message) { }
+        public UpdateException(string message, Exception innerException) :
             base(message, innerException) { }
-        public UpdateExceptions(string message, IReadOnlyList<string> entries) : base(message)
+        public UpdateException(string message, IReadOnlyList<string> entries) : base(message)
             => Entries = entries;
         
     }

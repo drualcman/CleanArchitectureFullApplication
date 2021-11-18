@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CleanArchitectureFullApplication.EFCore.DataContext\CleanArchitectureFullApplication.EFCore.DataContext.csproj" />
+    <ProjectReference Include="..\CleanArchitectureFullApplication.Sales.UseCases\CleanArchitectureFullApplication.Sales.UseCases.csproj" />
+    <ProjectReference Include="..\CleanArchitectureFullApplicationEntitites\CleanArchitectureFullApplication.Main.csproj" />
+  </ItemGroup>
+
+</Project>
