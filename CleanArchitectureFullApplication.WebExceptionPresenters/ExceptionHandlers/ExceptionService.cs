@@ -35,7 +35,8 @@ namespace CleanArchitectureFullApplication.WebExceptionPresenters.ExceptionHandl
             if (ExceptionHandlers.TryGetValue(exception.GetType(), out Type handlerType))
             {
                 var handler = Activator.CreateInstance(handlerType);
-                result = (ValueTask<ProblemDetails>)handlerType.GetMethod("Handle").Invoke(handler, new object[] { exception });
+                result = (ValueTask<ProblemDetails>)handlerType.GetMethod(nameof(IExceptionHandler<Type>.Handle))
+                    .Invoke(handler, new object[] { exception });
             }
             else
             {

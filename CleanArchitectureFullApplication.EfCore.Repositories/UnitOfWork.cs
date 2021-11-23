@@ -35,7 +35,7 @@ namespace CleanArchitectureFullApplication.EfCore.Repositories
             catch (Exception ex)
             {
                 Logger.Log(ex.InnerException?.Message ?? ex.Message);
-                throw new GeneralException("Error al persistur los cambios", ex.Message);
+                throw new GeneralException("Error al persistir los cambios", ex.Message);
             }
 
             return result;
