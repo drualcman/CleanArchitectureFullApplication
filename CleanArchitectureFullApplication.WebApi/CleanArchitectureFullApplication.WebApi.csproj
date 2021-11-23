@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CleanArchitectureFullApplication.Loggers\CleanArchitectureFullApplication.Loggers.csproj" />
+    <ProjectReference Include="..\CleanArchitectureFullApplication.Mail\CleanArchitectureFullApplication.Mail.csproj" />
+    <ProjectReference Include="..\CleanArchitectureFullApplication.Presenters\CleanArchitectureFullApplication.Presenters.csproj" />
+    <ProjectReference Include="..\CleanArchitectureFullApplication.Repositories.IoC\CleanArchitectureFullApplication.Repositories.IoC.csproj" />
+    <ProjectReference Include="..\CleanArchitectureFullApplication.Sales.UseCases\CleanArchitectureFullApplication.Sales.UseCases.csproj" />
+    <ProjectReference Include="..\CleanArchitectureFullApplication.WepApiControllers\CleanArchitectureFullApplication.WepApiControllers.csproj" />
+    <ProjectReference Include="..\CleanArchitectureFullApplicationEntitites\CleanArchitectureFullApplication.Main.csproj" />
+  </ItemGroup>
+
+</Project>

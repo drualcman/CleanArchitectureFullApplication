@@ -32,8 +32,6 @@ namespace CleanArchitectureFullApplication.Sales.Entities.Aggregates
 
             if (existingDetail != null) existingDetail.Quantity += detail.Quantity;
             else OrderDetailsField.Add(detail);
-           
-            OrderDetailsField.Add(detail);
         }
 
         public void AddDetail(int productId, decimal unitPrice, short quatity) =>

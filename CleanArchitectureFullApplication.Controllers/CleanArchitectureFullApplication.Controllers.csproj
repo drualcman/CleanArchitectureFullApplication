@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CleanArchitectureFullApplication.Dto\CleanArchitectureFullApplication.Dto.csproj" />
+    <ProjectReference Include="..\CleanArchitectureFullApplication.Presenters\CleanArchitectureFullApplication.Presenters.csproj" />
+    <ProjectReference Include="..\CleanArchitectureFullApplication.Sales.UseCases.Ports\CleanArchitectureFullApplication.Sales.UseCases.Ports.csproj" />
+    <ProjectReference Include="..\CleanArchitectureFullApplication.ViewModels\CleanArchitectureFullApplication.ViewModels.csproj" />
+  </ItemGroup>
+
+</Project>
