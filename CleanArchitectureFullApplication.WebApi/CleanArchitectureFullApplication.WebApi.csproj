@@ -14,6 +14,7 @@
     <ProjectReference Include="..\CleanArchitectureFullApplication.Presenters\CleanArchitectureFullApplication.Presenters.csproj" />
     <ProjectReference Include="..\CleanArchitectureFullApplication.Repositories.IoC\CleanArchitectureFullApplication.Repositories.IoC.csproj" />
     <ProjectReference Include="..\CleanArchitectureFullApplication.Sales.UseCases\CleanArchitectureFullApplication.Sales.UseCases.csproj" />
+    <ProjectReference Include="..\CleanArchitectureFullApplication.WebExceptionPresenters\CleanArchitectureFullApplication.WebExceptionPresenters.csproj" />
     <ProjectReference Include="..\CleanArchitectureFullApplication.WepApiControllers\CleanArchitectureFullApplication.WepApiControllers.csproj" />
     <ProjectReference Include="..\CleanArchitectureFullApplicationEntitites\CleanArchitectureFullApplication.Main.csproj" />
   </ItemGroup>

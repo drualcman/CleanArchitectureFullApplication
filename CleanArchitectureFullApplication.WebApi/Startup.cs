@@ -7,6 +7,7 @@ using CleanArchitectureFullApplication.Presenters;
 using CleanArchitectureFullApplication.Repositories.IoC;
 using CleanArchitectureFullApplication.Sales.Events;
 using CleanArchitectureFullApplication.Sales.UseCases;
+using CleanArchitectureFullApplication.WebExceptionPresenters.Filters;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -36,7 +37,7 @@ namespace CleanArchitectureFullApplication.WebApi
         public void ConfigureServices(IServiceCollection services)
         {
 
-            services.AddControllers();
+            services.AddControllers(Filters.Register);
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "CleanArchitectureFullApplication.WebApi", Version = "v1" });

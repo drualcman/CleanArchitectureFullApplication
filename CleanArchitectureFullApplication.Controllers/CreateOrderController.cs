@@ -24,8 +24,7 @@ namespace CleanArchitectureFullApplication.Controllers
         public async ValueTask<CreateOrderViewModel> CreateOrder(CreateOrderDto order)
         {
             await InputPort.Handle(order);
-            IPresenter<CreateOrderViewModel> presenter = OutputPort as CreateOrderPresenter;
-            return presenter.Content;
+            return ((IPresenter<CreateOrderViewModel>)OutputPort).Content;
         }
     }
 }

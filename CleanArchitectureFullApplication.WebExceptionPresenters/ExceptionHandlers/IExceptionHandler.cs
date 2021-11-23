@@ -9,6 +9,6 @@ namespace CleanArchitectureFullApplication.WebExceptionPresenters.ExceptionHandl
 {
     interface IExceptionHandler<ExceptionType>
     {
-        ValueTask<ProblemDetails> Handler(ExceptionType exception);
+        ValueTask<ProblemDetails> Handle(ExceptionType exception);
     }
 }
