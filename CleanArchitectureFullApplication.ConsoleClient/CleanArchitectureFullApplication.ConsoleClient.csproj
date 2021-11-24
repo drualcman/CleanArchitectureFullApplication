@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="appsettings.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="appsettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="5.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="5.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="5.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CleanArchitectureFullApplication.ConsoleControllers\CleanArchitectureFullApplication.ConsoleControllers.csproj" />
+    <ProjectReference Include="..\CleanArchitectureFullApplication.EfCore.Repositories\CleanArchitectureFullApplication.EfCore.Repositories.csproj" />
+    <ProjectReference Include="..\CleanArchitectureFullApplication.Loggers\CleanArchitectureFullApplication.Loggers.csproj" />
+    <ProjectReference Include="..\CleanArchitectureFullApplication.Mail\CleanArchitectureFullApplication.Mail.csproj" />
+    <ProjectReference Include="..\CleanArchitectureFullApplication.Repositories.IoC\CleanArchitectureFullApplication.Repositories.IoC.csproj" />
+    <ProjectReference Include="..\CleanArchitectureFullApplication.Sales.UseCases\CleanArchitectureFullApplication.Sales.UseCases.csproj" />
+    <ProjectReference Include="..\CleanArchitectureFullApplicationEntitites\CleanArchitectureFullApplication.Main.csproj" />
+  </ItemGroup>
+
+</Project>

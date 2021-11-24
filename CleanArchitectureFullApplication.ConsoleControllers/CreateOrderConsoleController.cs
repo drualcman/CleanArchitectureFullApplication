@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace CleanArchitectureFullApplication.ConsoleControllers
 {
-    public class CreateOrderController
+    public class CreateOrderConsoleController
     {
         readonly ICreateOrderController Controller;
 
-        public CreateOrderController(ICreateOrderController controller)
+        public CreateOrderConsoleController(ICreateOrderController controller)
         {
             Controller = controller;
         }

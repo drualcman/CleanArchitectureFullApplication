@@ -44,27 +44,29 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanArchitectureFullApplic
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ViewModels", "ViewModels", "{EF153F75-2898-4225-ACE0-8F5EE57CFDF1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArchitectureFullApplication.ViewModels", "CleanArchitectureFullApplication.ViewModels\CleanArchitectureFullApplication.ViewModels.csproj", "{8A9E77C3-F6C7-4ED0-9D73-D445EC91F271}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanArchitectureFullApplication.ViewModels", "CleanArchitectureFullApplication.ViewModels\CleanArchitectureFullApplication.ViewModels.csproj", "{8A9E77C3-F6C7-4ED0-9D73-D445EC91F271}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArchitectureFullApplication.Presenters", "CleanArchitectureFullApplication.Presenters\CleanArchitectureFullApplication.Presenters.csproj", "{A7DB91B1-D676-40AB-8CF5-647496AADFC2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanArchitectureFullApplication.Presenters", "CleanArchitectureFullApplication.Presenters\CleanArchitectureFullApplication.Presenters.csproj", "{A7DB91B1-D676-40AB-8CF5-647496AADFC2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Views", "Views", "{7D270EF1-EBF1-4831-B468-074D1E7AE059}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArchitectureFullApplication.ConsoleView", "CleanArchitectureFullApplication.ConsoleView\CleanArchitectureFullApplication.ConsoleView.csproj", "{7591DA14-2EF4-4494-B119-0DF80B630AA6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanArchitectureFullApplication.ConsoleView", "CleanArchitectureFullApplication.ConsoleView\CleanArchitectureFullApplication.ConsoleView.csproj", "{7591DA14-2EF4-4494-B119-0DF80B630AA6}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Controllers", "Controllers", "{C82AEA09-94CE-42E3-A015-954D57C69277}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArchitectureFullApplication.Controllers", "CleanArchitectureFullApplication.Controllers\CleanArchitectureFullApplication.Controllers.csproj", "{EDF5139F-7CAE-476D-B140-0D079D4A1218}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanArchitectureFullApplication.Controllers", "CleanArchitectureFullApplication.Controllers\CleanArchitectureFullApplication.Controllers.csproj", "{EDF5139F-7CAE-476D-B140-0D079D4A1218}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArchitectureFullApplication.WepApiControllers", "CleanArchitectureFullApplication.WepApiControllers\CleanArchitectureFullApplication.WepApiControllers.csproj", "{3FBC5A55-57AC-4EEE-BE7C-9200DB8CF607}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanArchitectureFullApplication.WepApiControllers", "CleanArchitectureFullApplication.WepApiControllers\CleanArchitectureFullApplication.WepApiControllers.csproj", "{3FBC5A55-57AC-4EEE-BE7C-9200DB8CF607}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArchitectureFullApplication.ConsoleControllers", "CleanArchitectureFullApplication.ConsoleControllers\CleanArchitectureFullApplication.ConsoleControllers.csproj", "{89C39753-42BA-4543-8644-C29F93407569}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanArchitectureFullApplication.ConsoleControllers", "CleanArchitectureFullApplication.ConsoleControllers\CleanArchitectureFullApplication.ConsoleControllers.csproj", "{89C39753-42BA-4543-8644-C29F93407569}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Frameworks and Drivers", "Frameworks and Drivers", "{32432DB2-EDF2-4A6E-97C3-11C5FFC23F9A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{3D832A25-17DD-4C4D-9A02-6FD54EF60AAA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArchitectureFullApplication.WebApi", "CleanArchitectureFullApplication.WebApi\CleanArchitectureFullApplication.WebApi.csproj", "{1142701E-3E3F-4112-BCBC-4FE62A4DC1BD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanArchitectureFullApplication.WebApi", "CleanArchitectureFullApplication.WebApi\CleanArchitectureFullApplication.WebApi.csproj", "{1142701E-3E3F-4112-BCBC-4FE62A4DC1BD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArchitectureFullApplication.ConsoleClient", "CleanArchitectureFullApplication.ConsoleClient\CleanArchitectureFullApplication.ConsoleClient.csproj", "{09FBAD69-7E02-4551-90E0-B21E05405162}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -148,6 +150,10 @@ Global
 		{1142701E-3E3F-4112-BCBC-4FE62A4DC1BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1142701E-3E3F-4112-BCBC-4FE62A4DC1BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1142701E-3E3F-4112-BCBC-4FE62A4DC1BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09FBAD69-7E02-4551-90E0-B21E05405162}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09FBAD69-7E02-4551-90E0-B21E05405162}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09FBAD69-7E02-4551-90E0-B21E05405162}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09FBAD69-7E02-4551-90E0-B21E05405162}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -179,6 +185,7 @@ Global
 		{89C39753-42BA-4543-8644-C29F93407569} = {C82AEA09-94CE-42E3-A015-954D57C69277}
 		{3D832A25-17DD-4C4D-9A02-6FD54EF60AAA} = {32432DB2-EDF2-4A6E-97C3-11C5FFC23F9A}
 		{1142701E-3E3F-4112-BCBC-4FE62A4DC1BD} = {3D832A25-17DD-4C4D-9A02-6FD54EF60AAA}
+		{09FBAD69-7E02-4551-90E0-B21E05405162} = {3D832A25-17DD-4C4D-9A02-6FD54EF60AAA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {596DDBE1-F3EA-472D-8F0E-15C42A2422AF}
