@@ -51,6 +51,15 @@ namespace CleanArchitectureFullApplication.WebApi
             services.AddValidators();
             services.AddPresenter();
             services.AddSalesControllers();
+            services.AddCors(options =>
+            {
+                options.AddPolicy("default", config =>
+                {
+                    config.AllowAnyMethod();
+                    config.AllowAnyOrigin();
+                    config.AllowAnyHeader();
+                });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -66,6 +75,7 @@ namespace CleanArchitectureFullApplication.WebApi
             app.UseHttpsRedirection();
 
             app.UseRouting();
+            app.UseCors("default");
 
             app.UseAuthorization();
 
