@@ -1,0 +1,5 @@
+Implementar Caso de uso Ibtener listado de ordenes de compra
+Caso de uso
+Historia de usuario: obtener listado de ordenes de compra
+Como usuario del sistema, sdeseo obtener un listado de las ordenes de compra creadas en una fecha 
+especifica para fines de consulta de la informacion.
