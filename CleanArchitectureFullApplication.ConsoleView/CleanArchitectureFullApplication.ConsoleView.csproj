@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\CleanArchitectureFullApplication.Sales.Entities\CleanArchitectureFullApplication.Sales.Entities.csproj" />
     <ProjectReference Include="..\CleanArchitectureFullApplication.ViewModels\CleanArchitectureFullApplication.ViewModels.csproj" />
   </ItemGroup>
 

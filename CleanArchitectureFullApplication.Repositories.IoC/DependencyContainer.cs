@@ -1,10 +1,13 @@
-﻿using CleanArchitectureFullApplication.EfCore.Repositories;
+﻿using CleanArchitectureFullApplication.Dapper.Repository;
+using CleanArchitectureFullApplication.EfCore.Repositories;
 using CleanArchitectureFullApplication.EFCore.DataContext;
 using CleanArchitectureFullApplication.Main.Interfaces;
 using CleanArchitectureFullApplication.Sales.UseCases.Common.Interfaces;
+using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using System.Data;
 
 namespace CleanArchitectureFullApplication.Repositories.IoC
 {
@@ -18,6 +21,11 @@ namespace CleanArchitectureFullApplication.Repositories.IoC
             services.AddScoped<ILogWritableRepository, LogWritableRepository>();
             services.AddScoped<IOrderWritableRepository, OrderWritableRepository>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
+
+            services.AddScoped<IDbConnection>( provider =>
+                new SqlConnection(configuration.GetConnectionString(connectionName)));
+
+            services.AddScoped<IOrderReadableRepository, OrderReadableRepository>();
             return services;
         }
     }

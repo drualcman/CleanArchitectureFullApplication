@@ -10,6 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\CleanArchitectureFullApplication.Dapper.Repository\CleanArchitectureFullApplication.Dapper.Repository.csproj" />
     <ProjectReference Include="..\CleanArchitectureFullApplication.EFCore.DataContext\CleanArchitectureFullApplication.EFCore.DataContext.csproj" />
     <ProjectReference Include="..\CleanArchitectureFullApplication.EfCore.Repositories\CleanArchitectureFullApplication.EfCore.Repositories.csproj" />
   </ItemGroup>

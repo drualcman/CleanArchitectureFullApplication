@@ -4,14 +4,16 @@ using CleanArchitectureFullApplication.EFCore.DataContext;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace CleanArchitectureFullApplication.EFCore.DataContext.Migrations
 {
     [DbContext(typeof(CleanArchitectureSalesContext))]
-    partial class CleanArchitectureSalesContextModelSnapshot : ModelSnapshot
+    [Migration("20211126015845_AddProductsAndCustomers")]
+    partial class AddProductsAndCustomers
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

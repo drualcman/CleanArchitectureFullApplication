@@ -1,0 +1,2 @@
+﻿add-migration AddProductsAndCustomers -p CleanArchitectureFullApplication.EFCore.DataContext -c CleanArchitectureSalesContext -o Migrations -s CleanArchitectureFullApplication.EFCore.DataContext
+update-database -p CleanArchitectureFullApplication.EFCore.DataContext -s CleanArchitectureFullApplication.EFCore.DataContext

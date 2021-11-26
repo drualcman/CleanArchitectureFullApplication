@@ -14,6 +14,7 @@ namespace CleanArchitectureFullApplication.Controllers
         public static IServiceCollection AddSalesControllers(this IServiceCollection services)
         {
             services.AddScoped<ICreateOrderController, CreateOrderController>();
+            services.AddScoped<IGetOrdersByDateController, GetOrdersByDateController>();
             return services;
         }
     }
